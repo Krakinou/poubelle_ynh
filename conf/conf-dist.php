@@ -29,7 +29,7 @@ define('ALIASLIMITBYMAIL', 30);
 // PDO stucture
 // Exemple pour MYSQL : 
 define('DB', 'mysql:host=127.0.0.1;dbname=__DB_NAME__');
-define('DBUSER', '__DB_USER__');
+define('DBUSER', '__DB_NAME__');
 define('DBPASS', '__DB_PWD__');
 // Exemple pour Sqlite : 
 //      define('DB', 'sqlite:./data/emailPoubelle.sqlite');
@@ -92,7 +92,7 @@ define('MAINTENANCE_IP', '10.0.0.1');
 
 
 // Mot de passe par défaut "admin" : 
-define('ADMIN_PASSWORD', 'admin');
+define('ADMIN_PASSWORD', '__PASSWORD__');
 
 
 ?>

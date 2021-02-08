@@ -42,7 +42,3 @@ sudo yunohost app install https://github.com/Yunohost-Apps/emailpoubelle_ynh/tre
 or
 sudo yunohost app upgrade emailpoubelle -u https://github.com/Yunohost-Apps/emailpoubelle_ynh/tree/Testing --debug
 ```
-
-## LICENCE
-
-Package and software are GPL 3.0

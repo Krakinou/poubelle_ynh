@@ -112,10 +112,6 @@ ynh_replace_string --match_string="__PASSWORD__" --replace_string="$password" --
 
 #setting conf file not world-readable (dude, there is a plain-text password !)
 chmod o-r $final_path/conf.php
-#initialize database (databasename = db_user)
-ynh_print_OFF
-ynh_mysql_create_db $db_user $db_user $db_pwd 
-ynh_print_ON
 
 #setting postfix to use virtual aliases file
 # Add postfix configuration hook and regen postfix conf
