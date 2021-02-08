@@ -5,10 +5,9 @@
 #=================================================
 
 # dependencies used by the app
+YNH_PHP_VERSION="7.3"
+pkg_dependencies="php-geoip php${YNH_PHP_VERSION}-cli"
 
-pkg_dependencies="php-geoip php7.0-cli"
-
-app="emailpoubelle"
 lang="fr_FR.UTF-8 en_US.UTF-8 it_IT.UTF-8"
 
 #=================================================

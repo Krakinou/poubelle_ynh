@@ -63,7 +63,10 @@ ynh_script_progression --message="Installing dependencies..." --weight=15
 
 ynh_install_app_dependencies $pkg_dependencies
 
-#install locale (nginx will restart at the end of the install)
+#=================================================
+# INSTALL LOCALES
+#=================================================
+# install locale (nginx will restart at the end of the install)
 for i in $lang ; do
  ynh_replace_string "# $i" "$i" /etc/locale.gen
 done
@@ -144,6 +147,15 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=2
 ynh_add_nginx_config
 
 #=================================================
+# PHP-FPM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Configuring PHP-FPM..." --weight=2
+
+# Create a dedicated PHP-FPM config
+ynh_add_fpm_config
+phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
+
+#=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring permissions..." --weight=1
@@ -160,7 +172,6 @@ fi
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
-
 ynh_systemd_action --service_name=postfix --action=reload
 
 #=================================================

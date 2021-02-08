@@ -1,3 +1,4 @@
 SOURCE_URL=https://github.com/kepon85/emailPoubelle.php/archive/d9f444c7687e3d4597d6d95c33fa96fd1332c1de.zip
 SOURCE_SUM=3ab236748b1b912c03ddf4e09c4e7f0304467adadc0012c9b8f434353fe26e46
+SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
